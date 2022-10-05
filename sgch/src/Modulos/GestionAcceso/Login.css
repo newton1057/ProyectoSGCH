@@ -1,0 +1,56 @@
+.Login{
+    background-color: #FF7315;
+    color: #E7F6F2;
+    width: 90%;
+    padding: 5%;
+    margin: auto;
+    border-radius: 10px ;
+    margin-top: 100px;
+}
+
+.Login form{
+    margin: auto;
+    width: 30%;
+}
+
+
+a{
+    text-decoration: none;
+    color: #E7F6F2;
+}
+
+#X{
+    display: flex;
+    font-size: 20px;
+}
+
+#X input{
+    width: 100%;
+}
+
+#X i{
+    padding-left: 10px;
+    margin: auto;
+    color: #E7F6F2;
+}
+
+#X button{
+    background-color: #FF7315;
+    border: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .Login{
+        background-color: #395b64;
+        color: #E7F6F2;
+        width: 90%;
+        padding: 5%;
+        border-radius: 10px ;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .Login form{
+        margin: auto;
+        width: 90%;
+    }
+  }

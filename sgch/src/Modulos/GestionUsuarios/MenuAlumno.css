@@ -1,0 +1,14 @@
+.Menu{
+    background-color: #FF7315;
+    color: #E7F6F2;
+    width: 90%;
+    padding: 2%;
+    margin: auto;
+    border-radius: 10px ;
+    margin-top: 90px;
+    
+}
+
+#NombreUsuario{
+    text-align: left;
+}

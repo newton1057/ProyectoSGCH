@@ -1,0 +1,56 @@
+.Registrar{
+    background-color: #FF7315;
+    color: #E7F6F2;
+    width: 90%;
+    padding: 5%;
+    margin: auto;
+    border-radius: 10px ;
+    margin-bottom: 50px;
+}
+
+#Campos{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin: auto;
+    width: 90%;
+}
+.css-b62m3t-container{
+    color: #FF7315;
+}
+
+.css-14el2xx-placeholder{
+    text-align: left;
+}
+.css-qc6sy-singleValue{
+    text-align: left;
+}
+.css-26l3qy-menu{
+    text-align: left;
+}
+#Campos1{
+    margin: auto;
+    width: 40%;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Registrar{
+        background-color: #FF7315;
+        color: #E7F6F2;
+        width: 90%;
+        padding: 5%;
+        border-radius: 10px ;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    #Campos{
+       
+        flex-direction: column;
+        width: 90%;
+    }
+    #Campos1{
+        width: 100%;
+    }
+  }
