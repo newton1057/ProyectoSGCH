@@ -1,10 +1,9 @@
 import {Router} from 'express';
-import {getUsuario, createCliente, getProductos, getCategorias, getOfertas} from '../controllers/API.controllers.js';
+import {createUsuario, ObtenerGrupos, ObtenerUsuario} from '../controllers/API.controllers.js';
 const router = Router();
 
-router.get('/API/:Email' , getUsuario);
-router.post('/API', createCliente) ;
-router.get('/Productos', getProductos);
-router.get('/Categorias', getCategorias);
-router.get('/Ofertas', getOfertas);
+router.post('/ObtenerUsuario', ObtenerUsuario);
+router.post('/CrearUsuario', createUsuario);
+router.post('/ObtenerGrupos', ObtenerGrupos);
+
 export default router;

@@ -3,7 +3,7 @@ import './Registrar.css';
 import {Form, Formik, useFormik } from 'formik';
 import {Link, withRouter , Navigate, useNavigate    } from 'react-router-dom';
 import Select from 'react-select'
-import {CrearUsuario} from '../../Api/Usuario.api';
+import {getGruposDisponibles} from '../../Api/Usuario.api';
 
 //Tipos de usuarios
 const TiposUsuarios = [
@@ -12,9 +12,19 @@ const TiposUsuarios = [
     { value: 'coordinador', label: 'Coordinador' }
 ]
 
-function Registrar() {
+function RegistrarClase() {
     const navigate = useNavigate();
-    const [TipoUser,setTipoUser] = useState("");   
+    const [Grupos,setGrupos] = useState([]);
+    
+    useEffect(() => {
+        async function loadGrupos(){
+          const response = await getGruposDisponibles();
+          setGrupos(response.data);
+        }
+    
+        loadGrupos()
+      }, [])
+
     function changeHandler(e) {
         setTipoUser(e);
     };
@@ -26,10 +36,7 @@ function Registrar() {
         <br></br>
         <Formik
             initialValues={{
-                Nombre: "",
-                Email: "",
-                Password: "",
-                TipoUsuario: ""
+                ID_Usuario
             }}
             onSubmit={async(values, actions)=>{
                 values.TipoUsuario=TipoUser.label;
@@ -78,4 +85,4 @@ function Registrar() {
   );
 }
  
-export default Registrar;
+export default RegistrarClase;

@@ -1,10 +1,10 @@
 import {createPool} from 'mysql2/promise';
 
+//Patron Singleton ya que solo se realiza una instancia
 export const pool = createPool({
-    host:'192.168.1.97',
+    host:'localhost',
     port:4308,
-    user:'user',
+    user:'root',
     password:'',
-    database:'ProyectoFinal'
+    database:'sgch'
 });
-
